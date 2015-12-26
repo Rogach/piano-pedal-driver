@@ -5,7 +5,7 @@
 #include <fcntl.h>
 #include <xdo.h>
 
-#define THRESHOLD 3
+#define THRESHOLD 2
 
 int main() {
   int esd_socket = 0;
