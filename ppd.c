@@ -45,11 +45,11 @@ int main() {
       if (buffer[i] - 128 > THRESHOLD && !ctrl_on) {
         printf("on\n");
         ctrl_on = 1;
-        xdo_keysequence_down(xdo, CURRENTWINDOW, "37", 0);
+        xdo_send_keysequence_window_down(xdo, CURRENTWINDOW, "37", 0);
       } else if (buffer[i] - 128 < - THRESHOLD && ctrl_on) {
         printf("off\n");
         ctrl_on = 0;
-        xdo_keysequence_up(xdo, CURRENTWINDOW, "37", 0);
+        xdo_send_keysequence_window_up(xdo, CURRENTWINDOW, "37", 0);
       }
     }
   }
